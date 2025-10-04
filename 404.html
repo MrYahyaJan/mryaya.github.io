@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Page not found | Yahyajan</title>
+  <meta name="theme-color" content="#0b1220" />
+  <!-- Reuse your site styles -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra 404 sugar without touching your main CSS */
+    .notfound-wrap{min-height:100svh;display:grid;place-items:center;padding:20px}
+    .notfound{max-width:740px;text-align:center}
+    .notfound .big{font-size:clamp(56px,10vw,120px);line-height:1;margin:0}
+    .notfound p{margin:10px 0 16px}
+    .links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .hint{color:var(--muted);font-size:14px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Home">
+        <svg class="logo" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#16A34A"/></linearGradient></defs>
+          <circle cx="14" cy="14" r="14" fill="url(#g)"/>
+          <text x="14" y="18.2" text-anchor="middle" font-size="12" font-family="Inter" font-weight="800" fill="#052E1B">YJ</text>
+        </svg>
+        <span class="wordmark">Smart Money Studio</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="notfound-wrap">
+    <section class="notfound card">
+      <h1 class="big">404</h1>
+      <h2>Page not found</h2>
+      <p class="muted">The link may be broken or the page may have moved.</p>
+      <div class="links" style="margin-top:10px">
+        <a class="btn" href="/">Go to Home</a>
+        <a class="ghost" href="#work" onclick="goSection('work')">See Work</a>
+        <a class="ghost" href="#contact" onclick="goSection('contact')">Contact</a>
+      </div>
+      <p class="hint" id="redirectMsg">Auto-redirecting to the homepage in 6 seconds…</p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>© <span id="year"></span> Yahyajan • Smart Money Studio</p>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // If this 404 loads under a subpath (e.g., /yaya.github.io/), build the correct base URL:
+    const base = (location.pathname.includes('/yaya.github.io/'))
+      ? '/yaya.github.io/'
+      : '/';
+
+    // Redirect after 6s
+    setTimeout(()=>{ location.href = base; }, 6000);
+
+    // Jump to section on the main page after redirect
+    function goSection(id){
+      // Immediately navigate home with hash for smooth jump
+      location.href = base + '#' + id;
+    }
+  </script>
+</body>
+</html>
