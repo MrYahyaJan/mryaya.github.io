@@ -3,22 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yahyajan — Luxury 3D Experience</title>
-  <meta name="description" content="A high-end, interactive 3D website experience by Yahyajan." />
+  <title>Yahyajan — Smart Money Studio</title>
+  <meta name="description" content="Smart Money Studio by Yahyajan — premium 3D websites, course sites, and modern brand experiences." />
   <meta name="theme-color" content="#0b1220" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <!-- simple favicon using the brand color -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2322C55E'/%3E%3Ctext x='50' y='62' font-size='54' text-anchor='middle' fill='%23052E1B' font-family='Inter' font-weight='800'%3EYJ%3C/text%3E%3C/svg%3E">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap nav">
-      <div class="brand">
-        <span class="logo">◎</span>
-        <span class="wordmark">Yahyajan</span>
-      </div>
+      <!-- Monogram logo (inline SVG) -->
+      <a class="brand" href="#home" aria-label="Yahyajan Home">
+        <svg class="logo" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#16A34A"/>
+            </linearGradient>
+          </defs>
+          <circle cx="14" cy="14" r="14" fill="url(#g)"/>
+          <text x="14" y="18.2" text-anchor="middle" font-size="12" font-family="Inter" font-weight="800" fill="#052E1B">YJ</text>
+        </svg>
+        <span class="wordmark">Smart Money Studio</span>
+      </a>
+
       <nav class="menu" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#studio">Studio</a>
@@ -41,15 +53,20 @@
     <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="wrap hero-content">
       <h1 class="headline">
-        Crafting <em>signature</em> digital experiences.
+        Wealth-grade <em>digital</em> experiences.
       </h1>
       <p class="sub">
-        Bespoke 3D interactions, cinematic motion, and timeless typography — engineered for performance.
+        Premium 3D sites, course funnels, and brand microsites — crafted by Yahyajan for growth, clarity, and speed.
       </p>
       <div class="cta">
         <a href="#work" class="btn">See Selected Work</a>
         <a href="#contact" class="ghost">Start a Project</a>
       </div>
+      <ul class="cred">
+        <li>Student & educator — <strong>Smart Money Skills</strong></li>
+        <li>Available for budgets up to <strong>$50k</strong></li>
+        <li>Based in Pakistan • Worldwide clients</li>
+      </ul>
     </div>
     <div class="scroll-indicator" aria-hidden="true">scroll</div>
     <noscript><p class="noscript">Enable JavaScript to experience the interactive 3D scene.</p></noscript>
@@ -60,15 +77,15 @@
     <section class="wrap highlights">
       <article class="card">
         <h3>Realtime 3D</h3>
-        <p>Three.js scenes with adaptive quality, post-processing bloom, and buttery 120fps on capable devices.</p>
+        <p>Three.js visuals with adaptive quality, bloom, and motion tuned for performance.</p>
       </article>
       <article class="card">
-        <h3>Luxury UI</h3>
-        <p>Grid layouts, glass surfaces, tactile hover states, and carefully tuned micro-interactions.</p>
+        <h3>Conversion Design</h3>
+        <p>Clear funnels, magnetic CTAs, and persuasive copy aligned to your offer.</p>
       </article>
       <article class="card">
-        <h3>SEO & A11y</h3>
-        <p>Semantic HTML, ARIA hints, color-contrast checks, and blazing Lighthouse scores.</p>
+        <h3>SEO & Accessibility</h3>
+        <p>Semantic HTML, ARIA labels, contrast-tested colors, and fast loads.</p>
       </article>
     </section>
 
@@ -76,18 +93,18 @@
     <section class="wrap section" id="work" aria-label="Selected work">
       <header class="section-head">
         <h2>Selected Work</h2>
-        <p class="muted">A few concept pieces from the 3D lab.</p>
+        <p class="muted">Recent concept pieces from Smart Money Studio.</p>
       </header>
 
       <div class="grid projects">
         <article class="proj card reveal">
           <div class="thumb" style="--img:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop')"></div>
           <div class="info">
-            <h3>Parametric Pavilion</h3>
-            <p>Procedural icosahedra, reflective surfaces, and parallax bloom for a gallery launch.</p>
+            <h3>Smart Money Site</h3>
+            <p>Course landing with animated value props, testimonials, and checkout CTA.</p>
             <div class="links">
-              <a class="ghost" href="#" aria-disabled="true">Demo</a>
-              <a class="ghost" href="#" aria-disabled="true">Code</a>
+              <a class="ghost" href="https://mryahyajan.github.io/yaya.github.io/" target="_blank">Demo</a>
+              <a class="ghost" href="https://github.com/MrYahyaJan/yaya.github.io" target="_blank">Code</a>
             </div>
           </div>
         </article>
@@ -95,8 +112,8 @@
         <article class="proj card reveal">
           <div class="thumb" style="--img:url('https://images.unsplash.com/photo-1551033541-2073ff84a07a?q=80&w=1600&auto=format&fit=crop')"></div>
           <div class="info">
-            <h3>Sculpted Commerce</h3>
-            <p>Premium storefront motion with camera-driven reveals and scroll-bound lighting.</p>
+            <h3>Portfolio Noir</h3>
+            <p>Luxury portfolio with glass panels, kinetic type, and 3D hero motion.</p>
             <div class="links">
               <a class="ghost" href="#" aria-disabled="true">Demo</a>
               <a class="ghost" href="#" aria-disabled="true">Code</a>
@@ -108,7 +125,7 @@
           <div class="thumb" style="--img:url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1600&auto=format&fit=crop')"></div>
           <div class="info">
             <h3>Neon Lab</h3>
-            <p>Emissive materials, depth-of-field hints, and subtle grain for a cinematic splash.</p>
+            <p>Emissive materials and parallax lighting for a cinematic splash page.</p>
             <div class="links">
               <a class="ghost" href="#" aria-disabled="true">Demo</a>
               <a class="ghost" href="#" aria-disabled="true">Code</a>
@@ -122,19 +139,19 @@
     <section class="wrap section" id="studio" aria-label="Studio">
       <header class="section-head">
         <h2>Studio</h2>
-        <p class="muted">A compact team with a maximal focus on craft.</p>
+        <p class="muted">One founder. High standards. Clear outcomes.</p>
       </header>
       <div class="studio card">
         <ul class="list">
-          <li>Realtime 3D &mdash; Three.js, WebGL, shaders</li>
-          <li>Web animation &mdash; GSAP, scroll choreography</li>
-          <li>Design systems &mdash; typography, motion, grids</li>
-          <li>Accessibility, SEO, and performance engineering</li>
+          <li>Realtime 3D — Three.js, shaders, post-processing</li>
+          <li>Motion design — choreography, scroll scenes, micro-interactions</li>
+          <li>Conversion flows — lead capture, checkout, email handoff</li>
+          <li>Performance & accessibility — Core Web Vitals, WCAG AA+</li>
         </ul>
         <div class="badges">
           <span>Core Web Vitals</span>
           <span>WCAG AA+</span>
-          <span>SSR-ready</span>
+          <span>SEO-ready</span>
         </div>
       </div>
     </section>
@@ -142,8 +159,8 @@
     <!-- CONTACT -->
     <section class="wrap section" id="contact" aria-label="Contact">
       <header class="section-head">
-        <h2>Let’s Build</h2>
-        <p class="muted">Tell me about your vision. I’ll reply within 24 hours.</p>
+        <h2>Start Your Project</h2>
+        <p class="muted">Share your goals. Typical budgets up to $50k.</p>
       </header>
       <form class="contact card" onsubmit="event.preventDefault(); alert('Thanks! I will reply soon.');">
         <label>
@@ -165,10 +182,9 @@
   </main>
 
   <footer class="site-footer wrap">
-    <p>© <span id="year"></span> Yahyajan. All rights reserved.</p>
+    <p>© <span id="year"></span> Yahyajan • Smart Money Studio</p>
   </footer>
 
-  <!-- 3D + motion (ES modules via CDN) -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
